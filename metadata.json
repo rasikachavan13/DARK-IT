@@ -1,0 +1,6 @@
+{
+  "name": "DARKIT — The Haunted Git Terminal",
+  "description": "Your code isn't dead. It's just haunted. Summon public GitHub repositories, interrogate commit ghosts, unearth bugs in the cemetery, and execute the revival ritual.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

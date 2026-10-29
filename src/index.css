@@ -1,0 +1,145 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --bg-main: #0D0B0A;
+    --bg-secondary: #15110F;
+    --surface-elevated: #1D1714;
+    --surface-deep: #110F0E;
+    --orange-primary: #FF7518;
+    --orange-bright: #FF9F43;
+    --amber-lantern: #FFC15A;
+    --orange-burnt: #A94C19;
+    --text-primary: #F4EDE5;
+    --text-secondary: #B4A69A;
+    --text-muted: #776C64;
+    --border-dark: #392820;
+    --spectral-ivory: #E8E2DC;
+    --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+    --font-display: 'Space Grotesk', system-ui, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: var(--font-display);
+  }
+
+  code, pre, .font-mono {
+    font-family: var(--font-mono);
+  }
+}
+
+/* Animations */
+@keyframes floatGhost {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(-1.5deg);
+  }
+}
+
+@keyframes floatGhostAlt {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-6px) rotate(2deg);
+  }
+}
+
+@keyframes lanternFlicker {
+  0%, 100% {
+    opacity: 1;
+    filter: drop-shadow(0 0 16px rgba(255, 165, 38, 0.45));
+  }
+  30% {
+    opacity: 0.88;
+    filter: drop-shadow(0 0 10px rgba(255, 140, 0, 0.35));
+  }
+  70% {
+    opacity: 0.96;
+    filter: drop-shadow(0 0 20px rgba(255, 180, 50, 0.55));
+  }
+}
+
+@keyframes amberPulse {
+  0%, 100% {
+    box-shadow: 0 0 20px -3px rgba(255, 117, 24, 0.25);
+  }
+  50% {
+    box-shadow: 0 0 32px 0px rgba(255, 159, 67, 0.45);
+  }
+}
+
+@keyframes emberRise {
+  0% {
+    transform: translateY(100%) translateX(0px);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.7;
+  }
+  80% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(-120px) translateX(24px);
+    opacity: 0;
+  }
+}
+
+.animate-ghost-float {
+  animation: floatGhost 4.5s ease-in-out infinite;
+}
+
+.animate-ghost-float-alt {
+  animation: floatGhostAlt 3.8s ease-in-out infinite;
+}
+
+.animate-lantern-flicker {
+  animation: lanternFlicker 3s ease-in-out infinite;
+}
+
+.animate-amber-pulse {
+  animation: amberPulse 3s ease-in-out infinite;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #110F0E;
+}
+::-webkit-scrollbar-thumb {
+  background: #392820;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #A94C19;
+}
+
+/* CRT Scanlines effect */
+.crt-overlay {
+  background: linear-gradient(
+    rgba(18, 16, 16, 0) 50%, 
+    rgba(0, 0, 0, 0.35) 50%
+  ), linear-gradient(
+    90deg,
+    rgba(255, 117, 24, 0.02),
+    rgba(0, 0, 0, 0.04),
+    rgba(255, 117, 24, 0.02)
+  );
+  background-size: 100% 3px, 6px 100%;
+  pointer-events: none;
+}

@@ -1,0 +1,973 @@
+# DARKIT — THE HAUNTED GIT TERMINAL
+## Complete Product Design & UI/UX Master Prompt for Figma
+
+### 1. YOUR ROLE
+
+Act as a senior product designer, UI/UX architect, creative director, and frontend design engineer. Redesign my existing project, **DARKIT**, into a distinctive, polished, responsive, production-quality developer tool.
+
+Do not create a generic AI dashboard, a generic Halloween landing page, or a static portfolio mockup. Create a cohesive, immersive product where a developer investigates haunted GitHub repositories, interrogates commit ghosts, discovers bugs, reviews evidence, earns XP, and revives abandoned codebases.
+
+The interface should feel like a combination of:
+
+- A haunted developer terminal.
+- A supernatural investigation laboratory.
+- An underground Halloween arcade.
+- A real GitHub repository intelligence tool.
+
+The Halloween aesthetic is a permanent part of the brand identity, not a temporary seasonal skin.
+
+**Product name:** DARKIT  
+**Product identity:** The Haunted Git Terminal  
+**Tagline:** Your code isn't dead. It's just haunted.  
+**Supporting tagline:** Summon the repo. Find the ghosts. Exorcise the bugs.  
+**Product category:** AI-assisted GitHub repository investigation and revival.
+
+The final result should be visually memorable enough for a hackathon showcase, technically believable enough for a software engineering portfolio, and usable enough that developers would actually want to explore repositories with it.
+
+---
+
+### 2. THE VISUAL WORLD: PUMPKINS, LANTERNS & GHOSTS EVERYWHERE
+
+This is the most important creative requirement.
+
+Create an immersive haunted world throughout the entire application. Pumpkins, lanterns, ghosts, spectral particles, and subtle supernatural details should appear across the interface—not only in the hero section.
+
+However, use intentional composition and visual hierarchy. The interface should feel richly haunted, not cluttered, childish, or difficult to navigate.
+
+#### A. Pumpkins 🎃
+
+Use pumpkins as a recurring visual motif.
+
+Include:
+- Small glowing jack-o’-lanterns in the top navigation and brand area.
+- A larger signature pumpkin illustration in the hero section.
+- Tiny pumpkins beside section titles, empty states, and achievement cards.
+- Pumpkin-shaped achievement icons and collectible decorations.
+- Miniature pumpkins at the corners of selected panels.
+- Small carved pumpkin decorations beside the Bug Cemetery.
+- A pumpkin mascot that changes expression based on user progress.
+- Pumpkin lanterns near the bottom of long pages.
+- Subtle pumpkin silhouettes in backgrounds and loading states.
+- Tiny pumpkin indicators for XP, level progression, and successful revival milestones.
+
+Give pumpkins different expressions: mischievous, sleepy, suspicious, excited, possessed, and victorious.
+
+Use warm amber light inside the carved faces. Some pumpkins can glow gently when the user hovers over an interactive element.
+
+Do not put a large pumpkin beside every line of text. Vary scale, placement, opacity, and frequency.
+
+#### B. Ghosts 👻
+
+Ghosts should become DARKIT's signature mascots and visual companions.
+
+Include:
+- A friendly floating ghost beside the DARKIT logo.
+- A main ghost companion in the hero section.
+- Tiny ghosts drifting through the background at different depths.
+- Ghosts peeking around cards and terminal windows.
+- A ghost mascot that reacts to repository analysis states.
+- Tiny commit ghosts near Git history and contributor information.
+- A ghost beside the Ghost Q&A interface.
+- Ghosts in loading, empty, success, and error states.
+- A ghost with a magnifying glass for repository investigation.
+- A ghost holding a bug-catching net for debugging.
+- A ghost carrying a lantern in the evidence section.
+- A ghost holding a wrench or crossed tools in the revival-plan section.
+- Ghost-themed XP rewards and achievement illustrations.
+- A playful cemetery ghost for abandoned repositories.
+- A tiny ghost that appears after a successful analysis or completed action.
+
+Ghosts should have expressive faces, soft translucent bodies, and subtle spectral glow. Some can have orange eyes or orange accessories. Others should be pale ivory or muted gray.
+
+Use a coherent illustration style: clean, slightly spooky, charming, developer-oriented, and detailed enough to feel designed specifically for DARKIT.
+
+The mascots should not look like unrelated stock illustrations or generic emoji pasted onto the interface. Establish a consistent visual language.
+
+#### C. Lanterns 🏮
+
+Lanterns should establish the atmosphere and guide attention.
+
+Include:
+- Hanging lanterns around the main hero composition.
+- Small lanterns framing the top navigation or page headings.
+- A warm lantern illuminating the repository search panel.
+- Lanterns mounted on the sides of the Evidence Wall.
+- Lanterns near the Bug Cemetery and Revival Plan.
+- Lanterns suspended from thin chains in selected page backgrounds.
+- Small lantern icons inside progress indicators and section dividers.
+- A spectral lantern carried by the ghost companion.
+- A few lanterns near the bottom of long pages to maintain the atmosphere.
+
+Use warm amber-orange light that creates localized pools of illumination on dark surfaces. Keep the lighting controlled, with soft gradients and subtle bloom.
+
+Do not let lantern illustrations obscure text, navigation, inputs, or buttons.
+
+#### D. Ambient supernatural effects
+
+Use subtle decorative effects throughout the application:
+- Slowly drifting embers.
+- Small orange fireflies.
+- Faint spectral particles.
+- Thin fog near the bottom of the viewport.
+- Barely visible haunted forest or cemetery silhouettes in selected backgrounds.
+- Occasional glowing eyes in deep background areas.
+- Fine scanlines and CRT-inspired texture.
+- Gentle light flicker on lanterns.
+- Soft ghost trails when mascots move.
+- Very subtle glitch effects on terminal prompts.
+
+Keep ambient effects lightweight and nonintrusive. Respect reduced-motion settings and provide a static fallback.
+
+Avoid excessive visual noise, aggressive flashing, full-screen fog, or constant glitch animations.
+
+---
+
+### 3. COLOR SYSTEM & ART DIRECTION
+
+Build a consistent design system around burnt orange, pumpkin orange, charcoal, warm ivory, and spectral gray.
+
+Suggested design tokens:
+
+- Main background: `#0D0B0A`
+- Secondary background: `#15110F`
+- Elevated surface: `#1D1714`
+- Deep panel surface: `#110F0E`
+- Primary pumpkin orange: `#FF7518`
+- Bright accent orange: `#FF9F43`
+- Lantern amber: `#FFC15A`
+- Muted burnt orange: `#A94C19`
+- Primary text: `#F4EDE5`
+- Secondary text: `#B4A69A`
+- Muted text: `#776C64`
+- Borders: `#392820`
+- Spectral ivory: `#E8E2DC`
+- Error red: `#FF5B57`
+- Success green: `#9BD49A`
+
+Use orange as the dominant accent, not as a background color for everything.
+
+The overall appearance should be dark, warm, cinematic, and atmospheric.
+
+Use:
+- Subtle orange gradients.
+- Controlled orange outer glows.
+- Fine borders.
+- Warm shadows.
+- Layered dark surfaces.
+- Sparse dotted and grid patterns.
+- Monospace text for terminal elements.
+- A highly readable sans-serif font for explanatory content.
+
+Typography recommendations:
+- Headings: Space Grotesk, Sora, or a similar geometric sans-serif.
+- Terminal text: JetBrains Mono or IBM Plex Mono.
+- Body text: Inter or a similar readable sans-serif.
+
+Use typography to create hierarchy. Large headlines should feel bold and intentional, while metadata should be compact and precise.
+
+Do not use excessive neon purple, bright blue, glassmorphism, or the stereotypical blue-purple AI dashboard palette.
+
+Avoid making every card glow. Glow should indicate focus, active states, supernatural elements, or important interactions.
+
+---
+
+### 4. BRAND IDENTITY & NAVIGATION
+
+Design a distinctive DARKIT logo combining a terminal prompt, a ghost, and a pumpkin-inspired element.
+
+The wordmark should read:
+
+**DARKIT**
+
+Supporting descriptor:
+
+`THE HAUNTED GIT TERMINAL`
+
+The logo should remain legible at small sizes. Create a simplified app icon that works as a favicon and in compact navigation.
+
+Desktop navigation:
+- DARKIT logo.
+- `Dashboard`
+- `Investigate`
+- `Ghost Q&A`
+- `Bug Cemetery`
+- `Evidence Wall`
+- `Revival Plan`
+- XP / level indicator.
+- Settings or user menu.
+
+Keep the navigation concise. Use an appropriate active state for the current page and subtle orange highlights.
+
+Mobile navigation should collapse into a clean, accessible menu or bottom navigation. Do not force the desktop navigation into a narrow screen.
+
+Decorative ghosts, miniature pumpkins, and lanterns may surround the navigation, but the links themselves must remain easy to click.
+
+---
+
+### 5. PAGE 1 — HAUNTED TERMINAL LANDING PAGE
+
+Create an impactful first screen that immediately communicates the product's purpose.
+
+#### Hero composition
+
+Use a dark charcoal background with a subtle haunted atmosphere.
+
+Place the primary content on the left and an original illustrated haunted-terminal scene on the right on desktop. Stack the content vertically on mobile.
+
+Small eyebrow label:
+
+`OPEN-SOURCE AI · REPOSITORY GHOST SHELL`
+
+Main headline:
+
+`Your code isn't dead.`
+
+`It's just haunted.`
+
+Supporting description:
+
+`A command-line séance for forgotten code. Trace the evidence, interrogate the commit ghosts, and bring abandoned repositories back from the dead.`
+
+Primary CTA:
+
+`SUMMON A REPOSITORY`
+
+Secondary CTA:
+
+`EXPLORE THE HAUNTED LAB`
+
+Show a tiny terminal prompt above the headline:
+
+`$ ./exorcise --repo`
+
+#### Hero illustration
+
+Build an original scene featuring:
+- A haunted terminal window.
+- A large glowing jack-o’-lantern.
+- Two or three expressive ghost companions.
+- Hanging lanterns.
+- A Git repository visualized as a haunted mansion or spooky file tree.
+- Small floating commit symbols and embers.
+- Orange light illuminating the surrounding environment.
+
+The illustration should integrate with the layout rather than appear as an unrelated image pasted into a card.
+
+Include a small floating terminal panel displaying illustrative output:
+
+`[INIT] Ghost shell online...`
+
+`[SCAN] Repository signature detected.`
+
+`[WARN] Unresolved bugs are roaming free.`
+
+`[READY] Awaiting repository URL.`
+
+Clearly treat this as decorative demonstration output, not a claim that an actual repository has already been scanned.
+
+#### Below the hero
+
+Add a compact feature strip containing:
+- Repository Intelligence.
+- Ghost Q&A.
+- Bug Detection.
+- Evidence Tracking.
+- Revival Planning.
+
+Each item should use a small, custom haunted icon and a concise explanation.
+
+Continue the page with a product preview, a clear workflow explanation, and a final repository-summoning CTA.
+
+Do not overload the landing page with lengthy marketing paragraphs.
+
+---
+
+### 6. PAGE 2 — DASHBOARD / HAUNTED REPOSITORY HQ
+
+This is the main application dashboard.
+
+It should feel like an active investigation station rather than a conventional SaaS analytics dashboard.
+
+#### Top section
+
+Display:
+- `THE HAUNTED GIT TERMINAL`
+- A short status line.
+- A ghost companion with a lantern.
+- User level and XP.
+- A daily-haunt indicator.
+- A clear primary action to investigate a repository.
+
+Suggested status:
+
+`The graveyard is quiet. Your next repository may not be.`
+
+#### Repository summoning panel
+
+Create a visually distinctive terminal-style form.
+
+Panel title:
+
+`SUMMON A REPOSITORY`
+
+Input placeholder:
+
+`https://github.com/owner/repository`
+
+Supporting text:
+
+`Enter a public GitHub repository URL to begin the investigation.`
+
+Primary button:
+
+`INITIATE HAUNT`
+
+Include a small pumpkin at the panel corner, a ghost peeking over the border, and a lantern illuminating the input area.
+
+Provide clear input validation and error messages.
+
+Support keyboard interaction and a visible focus state.
+
+#### Dashboard modules
+
+Organize the remaining modules into a responsive grid:
+
+1. **Repository Status** — repository name, owner, language, and relevant available repository metadata.
+2. **Ghost Q&A** — entry point for asking questions about the investigated repository.
+3. **Codebase Roast** — a playful but constructive code-quality assessment.
+4. **Daily Haunt** — daily challenge or task.
+5. **XP & Ghost Evolution** — progression and collectible mascot evolution.
+6. **Ghost Achievements** — earned achievements and locked rewards.
+7. **Bug Cemetery** — tracked bugs and issues identified by the tool.
+8. **Evidence Wall** — evidence supporting findings.
+9. **Revival Plan** — actionable steps to improve the repository.
+
+Every module should have a clear purpose, concise text, and a consistent icon or mascot treatment.
+
+Use pumpkin markers, small ghosts, and lantern details throughout the dashboard, but maintain strong visual hierarchy.
+
+Do not make all nine modules equally large. Give repository investigation the greatest prominence.
+
+---
+
+### 7. PAGE 3 — REPOSITORY INVESTIGATION
+
+Design a detailed repository-analysis workspace.
+
+The user should immediately understand which repository is being investigated, what information is available, and what action to take next.
+
+#### Repository header
+
+Include:
+- Repository name.
+- Owner.
+- GitHub link.
+- Primary language, when available.
+- Stars, forks, and other relevant metadata when provided by the actual integration.
+- Analysis status.
+- Refresh or re-analyze control, if supported.
+
+Use a compact repository identity panel with a tiny lantern and a ghost investigator.
+
+#### Analysis overview
+
+Create structured sections for:
+- Repository overview.
+- Project structure.
+- Languages and technologies.
+- Repository activity.
+- Potential issues.
+- Codebase Roast.
+- Recommendations.
+
+Only show metrics that the existing backend actually retrieves or calculates.
+
+Do not invent stars, contributor counts, issue counts, scan results, security findings, or analysis percentages.
+
+Use honest empty states for unavailable information.
+
+#### Codebase Roast
+
+Give this section a more playful visual identity.
+
+Possible heading:
+
+`THE ROAST CHAMBER`
+
+Subtitle:
+
+`Every codebase has secrets. Let's see what yours is hiding.`
+
+Use a ghost holding a magnifying glass or a pumpkin wearing detective glasses.
+
+Present the actual generated roast in a readable card. Separate humorous commentary from actionable technical recommendations.
+
+Never present invented observations as findings from the real repository.
+
+---
+
+### 8. PAGE 4 — GHOST Q&A
+
+Create a supernatural conversation interface where developers can ask questions about the investigated repository.
+
+Heading:
+
+`INTERROGATE THE GHOSTS`
+
+Subtitle:
+
+`Ask the repository spirits what the code is trying to tell you.`
+
+The interface should feel like a haunted terminal merged with a modern developer chat workspace.
+
+Include:
+- A ghost avatar for the assistant.
+- A user avatar or simple terminal prompt.
+- Clear message alignment.
+- Monospace styling for code snippets.
+- Syntax-highlighted code blocks.
+- Copy-code buttons where supported.
+- A readable loading state.
+- Clear error messages.
+- A multiline question input.
+- A send button.
+- Suggested starter questions.
+
+Example suggested questions:
+- `Where does the application start?`
+- `Explain the main architecture.`
+- `Which files should I inspect first?`
+- `What could be improved in this repository?`
+- `Help me understand this function.`
+
+These are suggested questions, not claims that the tool already knows their answers.
+
+The ghost mascot should react subtly to conversation states:
+- Waiting: sleepy ghost.
+- Processing: ghost carrying a lantern.
+- Answer ready: curious ghost.
+- Error: confused ghost.
+- Empty conversation: tiny ghost waving from the terminal.
+
+Use orange highlights for active messages and subtle spectral borders for assistant messages.
+
+Keep the actual conversation easy to read. Do not animate the entire chat window.
+
+---
+
+### 9. PAGE 5 — BUG CEMETERY
+
+This page should be one of DARKIT's most memorable branded experiences.
+
+Heading:
+
+`THE BUG CEMETERY`
+
+Subtitle:
+
+`Every unresolved bug has a story. Give it a proper investigation.`
+
+Design a dark, illustrated cemetery with subtle gravestones, small pumpkins, lanterns, drifting ghosts, and a faint layer of mist.
+
+Despite the theme, the interface must remain a functional bug-tracking workspace.
+
+#### Bug cards
+
+Each actual bug or finding should be displayed in a structured card containing applicable fields such as:
+- Bug title.
+- Description.
+- Severity, if available.
+- Affected file or location, if known.
+- Evidence or source.
+- Status.
+- Suggested next step.
+
+Use distinct but accessible severity treatments.
+
+Do not fabricate bugs or security vulnerabilities to fill empty space.
+
+#### Empty state
+
+If no bugs are available, show a friendly ghost sitting beside an empty gravestone.
+
+Text:
+
+`No bugs in this graveyard. Yet.`
+
+Supporting copy:
+
+`Summon a repository and investigate its codebase to uncover what needs attention.`
+
+CTA:
+
+`INVESTIGATE A REPOSITORY`
+
+#### Interaction design
+
+Provide filters or sorting only when supported by the underlying data.
+
+Use small pumpkin or lantern details as decorative accents. Keep all bug information readable.
+
+---
+
+### 10. PAGE 6 — EVIDENCE WALL
+
+This page should look like a supernatural detective's evidence room.
+
+Heading:
+
+`THE EVIDENCE WALL`
+
+Subtitle:
+
+`No accusations without evidence. Follow every clue.`
+
+Create a dark investigation-board layout with:
+- Structured evidence cards.
+- File references.
+- Relevant code snippets.
+- Source information.
+- Relationships between findings, when supported.
+- Links to repository files or source locations, when available.
+- A ghost detective holding a lantern.
+- Subtle connecting lines and orange markers.
+
+Use visual connections carefully. Do not create fake evidence relationships.
+
+Each evidence item should clearly distinguish:
+1. What was observed.
+2. Where the evidence came from.
+3. What the observation might mean.
+4. What action is recommended.
+
+Use orange for evidence markers, spectral ivory for content, and muted borders for structure.
+
+Avoid the clichéd red-string conspiracy board becoming so busy that users cannot understand the findings.
+
+Include an empty state with a ghost inspecting a magnifying glass:
+
+`Every mystery starts with a clue.`
+
+`Investigate a repository to build your evidence wall.`
+
+---
+
+### 11. PAGE 7 — REVIVAL PLAN
+
+This page transforms investigation findings into a practical repository-improvement workflow.
+
+Heading:
+
+`THE REVIVAL RITUAL`
+
+Subtitle:
+
+`Bring abandoned code back to life. One fix at a time.`
+
+Create a step-based plan using a visual progression from darkness to warm lantern light.
+
+Each step may contain:
+- Task title.
+- Reason for the task.
+- Relevant finding or evidence.
+- Suggested implementation approach.
+- Priority, if supported.
+- Estimated effort only when there is a defensible basis.
+- Completion state, where supported.
+
+Use a vertical timeline on desktop or mobile-friendly stacked cards on smaller screens.
+
+Possible illustrative steps:
+- Understand the repository structure.
+- Reproduce an identified issue.
+- Add missing tests.
+- Improve error handling.
+- Update outdated documentation.
+
+Label these as general examples unless they are actually generated from the repository analysis.
+
+Add tiny ghost companions that appear to help with each stage. Use a lantern at the end of the timeline to represent a successfully completed revival plan.
+
+Do not automatically mark tasks as complete or claim that code has been fixed unless the actual product performs that operation.
+
+---
+
+### 12. PAGE 8 — XP, GHOST EVOLUTION & ACHIEVEMENTS
+
+Turn developer exploration into a fun, optional progression system.
+
+The system should encourage users to investigate repositories, learn about codebases, and complete meaningful tasks.
+
+#### XP panel
+
+Show:
+- Current level.
+- XP earned.
+- Progress toward the next level.
+- Current ghost companion.
+- Available evolutions.
+- Earned achievements.
+- Daily haunt progress.
+
+Use a progress bar inspired by a glowing lantern or a spectral energy meter.
+
+#### Ghost evolution
+
+Create a small collection of original ghost designs.
+
+Possible evolution stages:
+1. **Lost Spirit** — a tiny, shy ghost.
+2. **Curious Phantom** — a ghost carrying a small lantern.
+3. **Code Detective** — a ghost with a magnifying glass.
+4. **Bug Exorcist** — a ghost holding a bug-catching net.
+5. **Repository Guardian** — an experienced ghost with a glowing pumpkin companion.
+
+These are proposed visual concepts. Map them to the existing progression rules where possible; do not invent backend progression features.
+
+#### Achievements
+
+Design collectible badges such as:
+- First Summoning.
+- Ghost Whisperer.
+- Bug Hunter.
+- Evidence Collector.
+- Revival Ritual.
+- Repository Explorer.
+
+Include locked, unlocked, and completed states if the existing app supports them.
+
+Use miniature pumpkins, lanterns, and ghost illustrations in the badges.
+
+The progression system should feel playful, not childish. Keep achievement labels and descriptions short.
+
+---
+
+### 13. PAGE 9 — DAILY HAUNT
+
+Create a compact daily challenge experience.
+
+Heading:
+
+`TODAY'S HAUNT`
+
+Subtitle:
+
+`One small investigation. One step closer to mastering the codebase.`
+
+Use a pumpkin-shaped challenge emblem and a ghost holding a tiny checklist.
+
+Show the actual daily task, progress, and reward when available.
+
+Include:
+- Challenge title.
+- Short instructions.
+- Completion state.
+- XP reward if defined by the existing system.
+- A clear action to begin or continue.
+
+Make the component engaging enough that users want to return, without creating unnecessary gamification clutter.
+
+---
+
+### 14. SHARED INTERACTION STATES
+
+Design all important interface states, not just the ideal screenshot.
+
+#### Initial state
+
+The user has not yet entered a repository.
+
+Show the main repository input, a welcoming ghost, a glowing pumpkin, and a clear first action.
+
+#### Loading state
+
+Display a small animated ghost carrying a lantern, subtle terminal output, and a clear status message.
+
+Possible text:
+
+`The spirits are examining your repository...`
+
+Avoid fake progress percentages unless the backend provides real progress data.
+
+#### Successful analysis
+
+Show a clear success state with a warm lantern glow and a celebratory ghost.
+
+Display actual results returned by the backend.
+
+#### Invalid repository
+
+Show a concerned ghost and a concise explanation.
+
+Explain what the user should correct, without overwhelming them.
+
+#### Network or API failure
+
+Display a useful error message, a retry action when appropriate, and a small ghost with a broken lantern.
+
+Do not leave the user staring at an infinite spinner.
+
+#### Empty data
+
+Use contextual haunted illustrations and one clear next action.
+
+#### Hover and focus
+
+Buttons, links, cards, and inputs should have distinct hover, focus, active, and disabled states.
+
+Use a subtle orange border or glow, not excessive movement.
+
+#### Success and completion
+
+Use small embers, a smiling ghost, or a brief lantern glow. Keep celebrations short.
+
+---
+
+### 15. RESPONSIVE DESIGN
+
+Design the entire product for desktop, tablet, and mobile.
+
+#### Desktop
+
+- A compact top navigation or sidebar.
+- A spacious main content area.
+- Multi-column dashboard grids.
+- A prominent repository-summoning panel.
+- Balanced decorative illustrations.
+- Clear visual separation between primary and secondary modules.
+
+#### Tablet
+
+- Collapse multi-column grids as needed.
+- Maintain comfortable text sizes.
+- Reduce decorative elements that compete with content.
+- Keep repository inputs and main actions prominent.
+
+#### Mobile
+
+- Single-column content.
+- Compact navigation.
+- Full-width inputs and primary buttons.
+- Readable code blocks with controlled horizontal overflow.
+- Stacked analysis cards.
+- Appropriately sized ghost and pumpkin illustrations.
+- No horizontal page overflow.
+- Touch targets of approximately 44 × 44 CSS pixels where practical.
+
+Do not simply shrink the desktop interface. Recompose the layout for smaller screens.
+
+Decorations should adapt to screen size. Reduce the number of floating elements on mobile if they affect performance or readability.
+
+---
+
+### 16. MICRO-INTERACTIONS & ANIMATION
+
+Create a coherent animation system.
+
+Recommended effects:
+- Ghosts gently float up and down.
+- Tiny ghosts occasionally peek around panel edges.
+- Pumpkins glow softly on hover.
+- Lanterns produce a subtle light pulse.
+- Embers drift slowly in the background.
+- Terminal cursor blinks gently.
+- Navigation transitions are smooth.
+- Cards lift slightly on hover.
+- XP progress animates when updated.
+- Achievement unlocks produce a short celebratory effect.
+- Loading ghosts move slowly while requests are processing.
+
+Animations should be purposeful and restrained.
+
+Do not:
+- Flash the screen.
+- Make text jitter constantly.
+- Apply heavy glitch effects to the entire page.
+- Animate every card simultaneously.
+- Prevent users from reading content.
+- Use motion that causes accessibility problems.
+
+Respect `prefers-reduced-motion`.
+
+---
+
+### 17. COMPONENT LIBRARY & DESIGN SYSTEM
+
+Create reusable components and consistent styles for:
+
+- Primary and secondary buttons.
+- Terminal-style input fields.
+- Navigation links.
+- Repository summary cards.
+- Ghost avatars.
+- Pumpkin decorations.
+- Lantern illustrations.
+- Status indicators.
+- Badges.
+- XP and level meters.
+- Achievement cards.
+- Bug cards.
+- Evidence cards.
+- Revival-plan steps.
+- Chat messages.
+- Code blocks.
+- Empty states.
+- Loading states.
+- Error states.
+- Modals and confirmation dialogs, if needed.
+- Tooltips.
+- Mobile navigation.
+
+Define:
+- Color tokens.
+- Typography styles.
+- Spacing scale.
+- Border radii.
+- Elevation and shadow styles.
+- Glow effects.
+- Responsive breakpoints.
+- Icon sizing.
+- Interaction states.
+
+Use consistent spacing and alignment. Prefer reusable design tokens over one-off values.
+
+Use original, coherent haunted illustrations instead of mixing unrelated icon packs.
+
+---
+
+### 18. ACCESSIBILITY & USABILITY
+
+The theme must never compromise usability.
+
+Ensure:
+- Strong text contrast.
+- Keyboard-accessible navigation.
+- Visible focus indicators.
+- Accessible form labels.
+- Meaningful button names.
+- Screen-reader-friendly status messages.
+- Error messages that explain how to recover.
+- No critical information communicated through color alone.
+- Reduced-motion support.
+- Reasonable text sizes.
+- Appropriate touch-target sizes.
+- Decorative illustrations hidden from assistive technology when they provide no information.
+
+Keep pumpkins, ghosts, and lanterns away from important text and controls.
+
+Avoid using the same icon to represent several unrelated actions.
+
+---
+
+### 19. TECHNICAL IMPLEMENTATION REQUIREMENTS
+
+Treat this as a redesign of an existing application, not a new disconnected prototype.
+
+The existing project includes:
+- React frontend.
+- Vite development tooling.
+- Express backend.
+- GitHub repository analysis.
+- Ollama/Gemma-based ghost Q&A and fallback behavior.
+- Codebase Roast.
+- XP, levels, ghost evolutions, achievements, and daily-haunt concepts.
+- Bug Cemetery.
+- Evidence Wall.
+- Revival Plan.
+- Report copy/export functionality.
+- Responsive CSS.
+
+**Preserve the existing product functionality and integration points.**
+
+If implementing directly in the codebase:
+- Inspect the existing files and component structure first.
+- Preserve the existing backend API contracts.
+- Preserve GitHub analysis behavior.
+- Preserve the current AI integration and fallback behavior.
+- Preserve existing state management and persistence.
+- Preserve working report copy/export behavior.
+- Do not replace functional features with static mock data.
+- Do not expose API keys or environment variables in frontend code.
+- Do not introduce dependencies without a clear reason.
+- Do not remove existing features just to simplify the design.
+- Test the build and existing workflows after changes.
+
+If using Figma Make, create a realistic interactive frontend prototype that reflects the existing product and can later be implemented in React.
+
+Use realistic example data only in clearly identified demonstration states. Keep actual repository results separate from sample content.
+
+Do not claim that a button works if it is only decorative. Where an integration is unavailable in the prototype, make the state clear and preserve a sensible path for later implementation.
+
+---
+
+### 20. WHAT TO AVOID
+
+Do not create:
+- A generic dark AI dashboard.
+- A generic SaaS admin template with orange buttons.
+- A simple Halloween landing page without the real product workflows.
+- A page made entirely from black rectangles.
+- A design that depends on purple neon gradients.
+- An interface filled with giant emoji.
+- Random pumpkins with no visual relationship to the product.
+- A different illustration style for every ghost.
+- Excessive orange glow around every element.
+- Tiny, low-contrast text.
+- Overly rounded cards everywhere.
+- Unnecessary glassmorphism.
+- Decorative animations that slow the interface down.
+- Fake analysis data presented as real.
+- Placeholder navigation with no meaningful destinations.
+- Static mockups that ignore mobile layouts.
+
+The product should feel like a carefully designed developer tool with a Halloween soul—not a Halloween poster pretending to be software.
+
+---
+
+### 21. FINAL DELIVERABLES
+
+Produce a complete, coherent DARKIT design experience with:
+
+1. A distinctive brand identity and logo.
+2. A haunted terminal landing page.
+3. A responsive dashboard.
+4. A repository-summoning interface.
+5. A repository investigation workspace.
+6. A Ghost Q&A interface.
+7. A Codebase Roast section.
+8. A Bug Cemetery.
+9. An Evidence Wall.
+10. A Revival Plan.
+11. XP, ghost evolution, and achievement components.
+12. A Daily Haunt component.
+13. Loading, success, empty, and error states.
+14. A reusable component library.
+15. Desktop, tablet, and mobile layouts.
+16. A consistent pumpkin-orange visual system.
+17. Original ghost, pumpkin, and lantern illustrations.
+18. Functional prototype interactions where supported.
+19. Developer handoff specifications, including spacing, colors, typography, and component states.
+
+Prioritize the core investigation journey first, then build the supporting experiences.
+
+The final interface should look polished in a live demo, remain readable during actual use, and feel like a product developers would remember.
+
+### FINAL CREATIVE DIRECTION
+
+Imagine opening DARKIT at midnight.
+
+A tiny ghost floats beside the logo. A pumpkin flickers in the corner of the terminal. Warm lantern light illuminates the repository input. Ghosts drift through the background while the interface remains crisp, fast, and readable.
+
+You enter a GitHub repository.
+
+The terminal awakens.
+
+The ghosts begin investigating.
+
+Evidence appears on the wall. Bugs enter the cemetery. A revival plan emerges. Your ghost companion evolves as you make progress.
+
+**That is the experience to design.**
+
+Make DARKIT feel like the internet's haunted workshop for forgotten code: mysterious, playful, technically credible, unmistakably orange, and filled with pumpkins, lanterns, and ghosts from the first screen to the last.
+
+**One final rule: the haunted atmosphere should make the product more memorable, while the developer workflow makes it genuinely useful.**
