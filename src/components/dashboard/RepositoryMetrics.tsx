@@ -189,18 +189,18 @@ export const RepositoryMetrics: React.FC<RepositoryMetricsProps> = ({
   }, [sparklineData, xScale, yScale, sparkHeight, sparkMargin]);
 
   return (
-    <div className="p-6 sm:p-8 rounded-2xl bg-[#15110F] border border-[#392820] shadow-[0_12px_36px_rgba(0,0,0,0.6)] relative overflow-hidden space-y-6">
+    <div className="p-4 sm:p-6 lg:p-8 rounded-2xl bg-[#15110F] border border-[#392820] shadow-[0_12px_36px_rgba(0,0,0,0.6)] relative overflow-hidden space-y-6">
       {/* Background Ambience */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-[#FF7518]/5 rounded-full blur-3xl pointer-events-none" />
 
       {/* Header with Title and Status */}
       <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 relative z-10">
         <div className="flex items-center gap-3.5">
-          <div className="p-2.5 rounded-xl bg-[#1D1714] border border-[#FF7518]/30">
+          <div className="p-2.5 rounded-xl bg-[#1D1714] border border-[#FF7518]/30 shrink-0">
             <BarChart3 className="w-5 h-5 text-[#FF7518]" />
           </div>
           <div>
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-2 flex-wrap">
               <span className="text-[10px] font-mono uppercase tracking-wider text-[#FF9F43] bg-[#FF7518]/15 px-2 py-0.5 rounded border border-[#FF7518]/30 font-bold flex items-center gap-1">
                 <Sparkles className="w-3 h-3 text-[#FF7518]" />
                 <span>D3 TELEMETRY ENGINE</span>
@@ -215,7 +215,7 @@ export const RepositoryMetrics: React.FC<RepositoryMetricsProps> = ({
                 </span>
               )}
             </div>
-            <h2 className="font-display font-extrabold text-xl sm:text-2xl text-[#F4EDE5] mt-1">
+            <h2 className="font-display font-extrabold text-lg sm:text-xl md:text-2xl text-[#F4EDE5] mt-1">
               REPOSITORY METRICS & CODEBASE VITALS
             </h2>
             <p className="text-xs text-[#B4A69A]">
@@ -225,10 +225,10 @@ export const RepositoryMetrics: React.FC<RepositoryMetricsProps> = ({
         </div>
 
         {/* View Switcher Tabs */}
-        <div className="flex items-center gap-1 p-1 bg-[#110F0E] rounded-xl border border-[#392820] text-xs font-mono">
+        <div className="flex items-center gap-1 p-1 bg-[#110F0E] rounded-xl border border-[#392820] text-xs font-mono w-full sm:w-auto justify-center sm:justify-start">
           <button
             onClick={() => setActiveMetricTab('languages')}
-            className={`px-3 py-1.5 rounded-lg transition-colors flex items-center gap-1.5 ${
+            className={`flex-1 sm:flex-initial px-3 py-1.5 rounded-lg transition-colors flex items-center justify-center gap-1.5 ${
               activeMetricTab === 'languages'
                 ? 'bg-[#1D1714] text-[#FF9F43] border border-[#FF7518]/30 font-bold'
                 : 'text-[#776C64] hover:text-[#B4A69A]'
@@ -239,7 +239,7 @@ export const RepositoryMetrics: React.FC<RepositoryMetricsProps> = ({
           </button>
           <button
             onClick={() => setActiveMetricTab('comparisons')}
-            className={`px-3 py-1.5 rounded-lg transition-colors flex items-center gap-1.5 ${
+            className={`flex-1 sm:flex-initial px-3 py-1.5 rounded-lg transition-colors flex items-center justify-center gap-1.5 ${
               activeMetricTab === 'comparisons'
                 ? 'bg-[#1D1714] text-[#FF9F43] border border-[#FF7518]/30 font-bold'
                 : 'text-[#776C64] hover:text-[#B4A69A]'
@@ -250,7 +250,7 @@ export const RepositoryMetrics: React.FC<RepositoryMetricsProps> = ({
           </button>
           <button
             onClick={() => setActiveMetricTab('commits')}
-            className={`px-3 py-1.5 rounded-lg transition-colors flex items-center gap-1.5 ${
+            className={`flex-1 sm:flex-initial px-3 py-1.5 rounded-lg transition-colors flex items-center justify-center gap-1.5 ${
               activeMetricTab === 'commits'
                 ? 'bg-[#1D1714] text-[#FF9F43] border border-[#FF7518]/30 font-bold'
                 : 'text-[#776C64] hover:text-[#B4A69A]'
@@ -263,7 +263,7 @@ export const RepositoryMetrics: React.FC<RepositoryMetricsProps> = ({
       </div>
 
       {/* 4 Primary Metric Cards */}
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
         {/* 1. Star Count */}
         <div className="p-4 rounded-xl bg-[#110F0E] border border-[#392820] hover:border-[#FF7518]/50 transition-colors space-y-1">
           <div className="flex items-center justify-between text-[#776C64]">
@@ -335,8 +335,8 @@ export const RepositoryMetrics: React.FC<RepositoryMetricsProps> = ({
         {activeMetricTab === 'languages' && (
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
             {/* D3 Donut SVG */}
-            <div className="md:col-span-5 flex justify-center items-center relative">
-              <svg width={donutWidth} height={donutHeight} className="overflow-visible drop-shadow-[0_0_16px_rgba(255,117,24,0.18)]">
+            <div className="md:col-span-5 flex justify-center items-center relative py-2">
+              <svg viewBox={`0 0 ${donutWidth} ${donutHeight}`} className="w-48 h-48 sm:w-60 sm:h-60 max-w-full overflow-visible drop-shadow-[0_0_16px_rgba(255,117,24,0.18)]">
                 <g transform={`translate(${donutWidth / 2}, ${donutHeight / 2})`}>
                   {pieArcs.map((arc, i) => {
                     const isHovered = hoveredLanguage === arc.data.name;
@@ -470,8 +470,8 @@ export const RepositoryMetrics: React.FC<RepositoryMetricsProps> = ({
               </span>
             </div>
 
-            <div className="w-full overflow-x-auto flex justify-center py-2">
-              <svg width={sparkWidth} height={sparkHeight} className="overflow-visible">
+            <div className="w-full overflow-x-auto flex justify-center py-2 px-1">
+              <svg viewBox={`0 0 ${sparkWidth} ${sparkHeight}`} className="w-full max-w-[480px] h-auto overflow-visible">
                 <defs>
                   <linearGradient id="sparkGradient" x1="0" y1="0" x2="0" y2="1">
                     <stop offset="0%" stopColor="#FF7518" stopOpacity="0.4" />

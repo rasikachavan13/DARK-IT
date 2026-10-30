@@ -650,24 +650,35 @@ Top recommendations from the séance:
 
 // Setup Vite middleware in dev or static files in prod
 async function startServer() {
-  if (!isProd) {
-    const { createServer } = await import('vite');
-    const vite = await createServer({
-      server: { middlewareMode: true },
-      appType: 'spa',
-    });
-    app.use(vite.middlewares);
-  } else {
-    const distPath = path.resolve(__dirname, 'dist');
-    app.use(express.static(distPath));
-    app.get('*', (req, res) => {
-      res.sendFile(path.resolve(distPath, 'index.html'));
-    });
-  }
+  try {
+    if (!isProd) {
+      const { createServer } = await import('vite');
+      const vite = await createServer({
+        server: { middlewareMode: true },
+        appType: 'spa',
+      });
+      app.use(vite.middlewares);
+    } else {
+      const distPath = path.resolve(__dirname, 'dist');
+      app.use(express.static(distPath));
+      app.get('*', (req, res) => {
+        res.sendFile(path.resolve(distPath, 'index.html'));
+      });
+    }
 
-  app.listen(PORT, () => {
-    console.log(`DARKIT Haunted Git Terminal running at http://localhost:${PORT}`);
-  });
+    const portNum = typeof PORT === 'string' ? parseInt(PORT, 10) : PORT;
+    const server = app.listen(portNum, '0.0.0.0', () => {
+      console.log(`DARKIT Haunted Git Terminal running at http://0.0.0.0:${portNum}`);
+    });
+
+    server.on('error', (err: any) => {
+      console.error('Server encountered error:', err);
+    });
+  } catch (err) {
+    console.error('Failed to initialize server:', err);
+    process.exit(1);
+  }
 }
 
 startServer();
+

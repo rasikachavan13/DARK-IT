@@ -26,6 +26,15 @@
     font-family: var(--font-sans);
     background-color: var(--bg-main);
     color: var(--text-primary);
+    overflow-x: hidden;
+    width: 100%;
+    min-height: 100vh;
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+
+  html {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
   }
 
   h1, h2, h3, .font-display {
@@ -97,7 +106,37 @@
   }
 }
 
+@keyframes ghostEchoRise {
+  0% {
+    transform: translateY(110%) scale(0.94);
+    opacity: 0;
+  }
+  12% {
+    opacity: 0.95;
+    transform: translateY(70%) scale(1);
+  }
+  50% {
+    opacity: 0.88;
+    transform: translateY(10%) translateX(10px);
+  }
+  82% {
+    opacity: 0.75;
+    transform: translateY(-60%) translateX(-8px);
+  }
+  100% {
+    transform: translateY(-130%) translateX(14px) scale(0.92);
+    opacity: 0;
+  }
+}
+
+.animate-ghost-echo-rise {
+  animation-name: ghostEchoRise;
+  animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  animation-fill-mode: forwards;
+}
+
 .animate-ghost-float {
+
   animation: floatGhost 4.5s ease-in-out infinite;
 }
 

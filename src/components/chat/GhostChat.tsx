@@ -104,7 +104,7 @@ export const GhostChat: React.FC<GhostChatProps> = ({
       </div>
 
       {/* Main Terminal Chat Container */}
-      <div className="rounded-2xl bg-[#110F0E] border border-[#392820] shadow-[0_16px_40px_rgba(0,0,0,0.7)] flex flex-col h-[600px] overflow-hidden">
+      <div className="rounded-2xl bg-[#110F0E] border border-[#392820] shadow-[0_16px_40px_rgba(0,0,0,0.7)] flex flex-col h-[520px] sm:h-[620px] overflow-hidden">
         {/* Terminal Header */}
         <div className="px-4 py-3 bg-[#15110F] border-b border-[#392820] flex items-center justify-between">
           <div className="flex items-center gap-2">

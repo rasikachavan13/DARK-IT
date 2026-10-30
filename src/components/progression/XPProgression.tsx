@@ -170,7 +170,7 @@ export const XPProgression: React.FC<XPProgressionProps> = ({
           </span>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
           {EVOLUTIONS.map((evo) => {
             const isUnlocked = userLevel >= evo.minLevel;
             const isSelected = activeCompanion === evo.id;

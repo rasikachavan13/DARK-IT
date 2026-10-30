@@ -3,6 +3,7 @@ import { SummonedRepository, FileItem } from '../../types/index.js';
 import { JackOLantern } from '../illustrations/JackOLantern.js';
 import { GhostCompanion } from '../illustrations/GhostCompanion.js';
 import { HangingLantern } from '../illustrations/HangingLantern.js';
+import { GhostEchoes } from './GhostEchoes.js';
 import {
   ExternalLink,
   GitBranch,
@@ -162,6 +163,9 @@ export const InvestigateWorkspace: React.FC<InvestigateWorkspaceProps> = ({
           </div>
         </div>
       </div>
+
+      {/* Ghost Echoes: Ephemeral Floating Historical Commit Messages */}
+      <GhostEchoes commits={commits} repoName={meta.fullName} />
 
       {/* Main Grid: Overview & Languages & Roast */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">

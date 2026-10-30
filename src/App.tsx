@@ -147,10 +147,10 @@ export default function App() {
   // Visual CRT Scanlines Effect
   const [crtActive, setCrtActive] = useState<boolean>(true);
 
-  // Global Supernatural Soundscape
+  // Global Supernatural Soundscape - defaults to true for continuous background ghost danger sound
   const [soundActive, setSoundActive] = useState<boolean>(() => {
     const saved = localStorage.getItem('darkit_sound');
-    return saved === 'true';
+    return saved !== null ? saved === 'true' : true;
   });
 
   // Floating notification toast for XP awards
@@ -176,13 +176,28 @@ export default function App() {
     localStorage.setItem('darkit_daily', JSON.stringify(dailyHaunt));
   }, [dailyHaunt]);
 
-  // Sync ambient soundscape
+  // Sync ambient ghost danger soundscape
   useEffect(() => {
     localStorage.setItem('darkit_sound', soundActive ? 'true' : 'false');
     soundEngine.setAmbience(soundActive);
-    if (soundActive) {
-      soundEngine.playGhostChime();
-    }
+  }, [soundActive]);
+
+  // Auto-resume audio on first user gesture (satisfying browser autoplay policies)
+  useEffect(() => {
+    const handleInteraction = () => {
+      soundEngine.resumeOnInteraction();
+      if (soundActive) {
+        soundEngine.setAmbience(true);
+      }
+    };
+    window.addEventListener('pointerdown', handleInteraction, { once: true });
+    window.addEventListener('keydown', handleInteraction, { once: true });
+    window.addEventListener('click', handleInteraction, { once: true });
+    return () => {
+      window.removeEventListener('pointerdown', handleInteraction);
+      window.removeEventListener('keydown', handleInteraction);
+      window.removeEventListener('click', handleInteraction);
+    };
   }, [soundActive]);
 
   // Update companion unlocks based on level
@@ -440,9 +455,9 @@ export default function App() {
 
       {/* Floating XP Award Toast */}
       {toastMessage && (
-        <div className="fixed bottom-20 right-6 z-50 p-3.5 rounded-xl bg-[#1D1714] border border-[#FF7518] shadow-[0_0_24px_rgba(255,117,24,0.4)] flex items-center gap-3 animate-bounce">
+        <div className="fixed bottom-16 sm:bottom-20 right-4 sm:right-6 z-50 p-2.5 sm:p-3.5 max-w-[calc(100vw-32px)] rounded-xl bg-[#1D1714] border border-[#FF7518] shadow-[0_0_24px_rgba(255,117,24,0.4)] flex items-center gap-2.5 sm:gap-3 animate-bounce">
           <JackOLantern expression="victorious" size="xs" />
-          <span className="font-mono text-xs font-bold text-[#FF9F43]">
+          <span className="font-mono text-xs font-bold text-[#FF9F43] truncate">
             {toastMessage}
           </span>
         </div>
@@ -452,7 +467,7 @@ export default function App() {
       {activeTab !== 'chat' && (
         <button
           onClick={() => handleTabChange('chat')}
-          className="fixed bottom-6 right-6 z-40 bg-[#15110F] hover:bg-[#1D1714] text-[#F4EDE5] border border-[#FF7518]/50 hover:border-[#FF7518] px-4 py-2.5 rounded-full shadow-[0_8px_30px_rgba(255,117,24,0.35)] flex items-center gap-2.5 transition-all group hover:scale-105 active:scale-95"
+          className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-40 bg-[#15110F] hover:bg-[#1D1714] text-[#F4EDE5] border border-[#FF7518]/50 hover:border-[#FF7518] px-3 sm:px-4 py-2 sm:py-2.5 rounded-full shadow-[0_8px_30px_rgba(255,117,24,0.35)] flex items-center gap-2 sm:gap-2.5 transition-all group hover:scale-105 active:scale-95 text-xs sm:text-sm"
           title="Open Gemini Ghost Chatbot"
         >
           <div className="relative">
@@ -460,7 +475,7 @@ export default function App() {
             <span className="absolute -top-1 -right-1 w-2 h-2 rounded-full bg-[#FF7518] animate-ping" />
           </div>
           <span className="font-display font-bold text-xs tracking-wide text-[#F4EDE5] group-hover:text-[#FF9F43]">
-            Ask Gemini Ghost
+            Ask Gemini
           </span>
           <span className="text-[9px] font-mono font-bold px-1.5 py-0.5 rounded bg-[#FF7518]/20 text-[#FF9F43] border border-[#FF7518]/40">
             AI

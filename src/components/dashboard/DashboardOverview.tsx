@@ -160,10 +160,10 @@ export const DashboardOverview: React.FC<DashboardOverviewProps> = ({
         </div>
 
         {/* Level and Status Strip */}
-        <div className="flex items-center gap-3 relative z-10 w-full md:w-auto justify-between md:justify-end border-t md:border-t-0 border-[#392820] pt-4 md:pt-0 flex-wrap sm:flex-nowrap">
+        <div className="grid grid-cols-1 sm:grid-cols-3 md:flex items-center gap-2.5 relative z-10 w-full md:w-auto border-t md:border-t-0 border-[#392820] pt-4 md:pt-0">
           {/* 60s Background Telemetry Auto-Sync Switch */}
           <div
-            className={`flex items-center gap-2.5 px-3 py-2 rounded-xl border transition-all ${
+            className={`flex items-center justify-between sm:justify-start gap-2.5 px-3 py-2 rounded-xl border transition-all ${
               autoSync
                 ? 'bg-[#1D1714] border-[#FF7518]/50 shadow-[0_0_16px_rgba(255,117,24,0.18)]'
                 : 'bg-[#1D1714] border-[#392820]'
@@ -482,7 +482,7 @@ export const DashboardOverview: React.FC<DashboardOverviewProps> = ({
           <span className="text-xs text-[#776C64]">Click any card to inspect findings</span>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {/* 1. Repository Status */}
           <div
             onClick={() => setActiveTab('investigate')}
